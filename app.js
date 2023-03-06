@@ -10,7 +10,7 @@ app.get("/", function (req, res) {
 });
 app.post("/", function (req, res) {
   const query = req.body.cityName;  //Retrieving city name from client
-  const appid ="";
+  const appid =""; //insert API key here
 
   const url1 = "https://api.openweathermap.org/geo/1.0/direct?q=" + query + "&appid=" + appid;
   https.get(url1, function(response) {
